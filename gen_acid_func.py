@@ -1,7 +1,7 @@
 #intention: general n-protic acid titrator program:
 #update Fall 2014
+from numpy import *
 
-from pylab import *
 
 class gen_acid:
     def __init__(self,K=[1.8e-5],ca0=0.100,V0=50.0):
@@ -61,11 +61,7 @@ class gen_acid:
 if __name__ == "__main__":
     acid = gen_acid([6.31e-3,5.62e-5,2.14e-10])
     acid.titrate()
-    plot(acid.vlist, acid.pH)
-    title("Phosphoric Acid")
-    xlabel("vol OH- added")
-    ylabel("pH")
-    show()
+    
                      
             
             

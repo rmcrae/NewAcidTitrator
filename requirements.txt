@@ -4,3 +4,4 @@ bqplot>=0.12.30
 ipywidgets>=8.0
 ipyfilechooser
 pandas
+openpyxl

@@ -11,6 +11,8 @@ class gen_acid:
         self.V0 = V0
         self.na0 = ca0 * V0
         self.nH = len(K)
+        # change 4/3/24
+        self.cOH = None
 
     def titrate(self, cOH=0.10, npoints=200):
         self.cOH = cOH
@@ -38,7 +40,10 @@ class gen_acid:
         self.pH = -log10(array(self.Hlist))
         
     def func_pH(self, v, cOH=0.10):
-        self.cOH = cOH
+        #change 4/3/24
+        if not self.cOH:
+            self.cOH = 0.1
+        #self.cOH = cOH
         self.Veq = self.na0 / self.cOH
         
         nOH = self.cOH * v
